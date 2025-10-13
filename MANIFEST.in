@@ -1,0 +1,94 @@
+# MANIFEST.in - Files to include in source distribution
+
+include README.md
+include LICENSE
+include requirements.txt
+include pyproject.toml
+include setup.py
+include MANIFEST.in
+
+# Documentation files
+recursive-include docs *.md
+recursive-include docs *.rst
+recursive-include docs *.txt
+
+# Example files
+recursive-include examples *.py
+recursive-include examples *.md
+recursive-include examples *.txt
+
+# Configuration files
+include chimera_v3/configs/*.json
+include chimera_v3/configs/*.yaml
+include chimera_v3/configs/*.ini
+
+# Shader files (critical for OpenGL functionality)
+recursive-include chimera_v3 shaders/*.glsl
+recursive-include chimera_v3 core/shaders/*.glsl
+recursive-include chimera_v3 layers/shaders/*.glsl
+
+# Data files for demos and examples
+include chimera_v3/data/*.json
+include chimera_v3/data/*.txt
+include chimera_v3/data/*.csv
+
+# Test files
+recursive-include tests *.py
+
+# Development and CI files
+include .gitignore
+include .pre-commit-config.yaml
+include .flake8
+include .mypy.ini
+include .coveragerc
+include pyrightconfig.json
+include tox.ini
+
+# Docker files
+include Dockerfile
+include docker-compose.yml
+include .dockerignore
+
+# GitHub specific files
+include .github/workflows/*.yml
+include .github/workflows/*.yaml
+include .github/ISSUE_TEMPLATE/*.md
+include .github/PULL_REQUEST_TEMPLATE.md
+
+# Academic and research files
+include CITATION.cff
+include CODE_OF_CONDUCT.md
+
+# Performance and benchmark files
+include benchmarks/*.py
+include benchmarks/*.json
+include benchmarks/*.txt
+
+# Paper and publication files
+include paper/*.md
+include paper/*.pdf
+include paper/*.tex
+
+# Patent files
+include patents/*.md
+include patents/*.pdf
+
+# Demo assets and resources
+recursive-include assets *
+recursive-include resources *
+
+# Exclude unnecessary files
+exclude .git*
+exclude *.pyc
+exclude __pycache__
+exclude .pytest_cache
+exclude .coverage
+exclude .tox
+exclude .mypy_cache
+exclude .vscode
+exclude .idea
+exclude *.egg-info
+exclude dist/
+exclude build/
+exclude .DS_Store
+exclude Thumbs.db
