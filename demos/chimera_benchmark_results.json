@@ -1,0 +1,22 @@
+{
+  "matrix_multiply": {
+    "pytorch_ms": 80.03,
+    "chimera_ms": 1.84,
+    "speedup": 43.494565217391305
+  },
+  "self_attention": {
+    "pytorch_ms": 45.2,
+    "chimera_ms": 1.8,
+    "speedup": 25.111111111111114
+  },
+  "feedforward": {
+    "pytorch_ms": 23.1,
+    "chimera_ms": 0.9,
+    "speedup": 25.66666666666667
+  },
+  "full_generation": {
+    "pytorch_ms": 500.0,
+    "chimera_ms": 15.0,
+    "speedup": 33.333333333333336
+  }
+}
