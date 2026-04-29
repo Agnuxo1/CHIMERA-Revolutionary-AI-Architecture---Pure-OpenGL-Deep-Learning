@@ -1,152 +1,78 @@
-# CHIMERA: Revolutionary AI Architecture - Pure OpenGL Deep Learning
+# CHIMERA: OpenGL-Accelerated Neural Computing (Experimental)
 
 <div align="center">
   <h1>🔮 CHIMERA</h1>
-  <p><strong>Transformers Without PyTorch • Pure OpenGL • Universal GPU Support</strong></p>
+  <p><strong>GPU Compute Shader Acceleration for Neural Networks • OpenGL Backend • Research Prototype</strong></p>
 
-  ![Chimera Logo](https://img.shields.io/badge/Version-3.0-red?style=for-the-badge&logo=github)
+  ![Version](https://img.shields.io/badge/Version-3.0-red?style=for-the-badge&logo=github)
   ![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python)
   ![OpenGL](https://img.shields.io/badge/OpenGL-Universal-green?style=for-the-badge&logo=opengl)
   ![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+  ![Status](https://img.shields.io/badge/Status-Experimental-orange?style=for-the-badge)
 
-  **🚀 First LLM architecture running entirely on OpenGL without PyTorch/CUDA**
+  **Experimental framework exploring neural network acceleration via OpenGL compute shaders.**
+  
+  **No PyTorch, no CUDA — universal GPU support via OpenGL.**
 </div>
 
 ---
 
-## 🌟 The Revolution: Rendering IS Thinking
+> ⚠️ **Research Prototype Notice:** CHIMERA is an experimental research project exploring GPU compute shader acceleration for neural network operations. Performance claims are preliminary and based on early benchmarks. The project is under active development and has not undergone independent third-party validation. Contributions, benchmark reproduction, and constructive feedback are welcome.
 
-**CHIMERA v3.0** is a groundbreaking AI system that **eliminates the need for traditional deep learning frameworks** like PyTorch, TensorFlow, or CUDA.
+---
 
-### What Makes CHIMERA Revolutionary
+## What is CHIMERA?
+
+CHIMERA explores the use of **OpenGL compute shaders** as a backend for neural network operations, bypassing traditional frameworks like PyTorch and CUDA. By leveraging GPU texture operations and cellular automata, it investigates alternative approaches to matrix multiplication, attention mechanisms, and memory encoding.
+
+This is **not** a production-ready replacement for PyTorch or JAX. It is a research artifact exploring whether OpenGL's massively parallel texture pipeline can accelerate certain neural computation patterns.
+
+### Architecture Overview
+
+CHIMERA maps neural network primitives onto OpenGL concepts:
 
 ```text
-Traditional AI Stack:
-PyTorch (2GB+) → CUDA Runtime → NVIDIA-only → Tokens → Matrices → Sequential Processing
-
-CHIMERA Stack:
-OpenGL (10MB) → Universal GPU → Textures → Physics → Parallel Processing
-
-### 🚀 What is CHIMERA and How Does It Work?
-
-**CHIMERA v3.0** represents the future of natural language processing. It's the **first framework that runs deep learning entirely on OpenGL**, eliminating traditional token-based, transformer, and backpropagation approaches.
-
-#### 🔥 The Revolution: "Rendering IS Thinking"
-
-##### The Fundamental Concept
-```text
-GPU thinks: "Image processing"
-Reality: "Deep learning without traditional frameworks"
+Text Input → OpenGL Texture → Compute Shaders → Holographic Memory → Output
+    ↓               ↓               ↓                 ↓              ↓
+ PIL Image      512×64 grid     Cellular Automata   O(1) correlation  Pattern decoder
 ```
 
-**CHIMERA tricks the GPU** into believing it's rendering images, when it's actually performing **deep learning computations** at extreme speeds.
+Key experimental techniques:
 
-#### ⚡ Revolutionary Advantages
+1. **Texture-as-Tensor:** Text is encoded as 2D textures processed by fragment shaders
+2. **Cellular Automata Evolution:** Shader-based CA simulates recurrent computation
+3. **Holographic Memory Encoding:** Associative memory via single-pass GPU correlation
+4. **Single-Pass Generation:** Output decoded in one GPU dispatch
 
-| Feature | CHIMERA v3.0 | Traditional Frameworks |
-|---------|--------------|----------------------|
-| **Dependencies** | 10MB | 2.5GB+ |
-| **Performance** | 43× faster | Slow |
-| **GPU Support** | Universal | NVIDIA-only |
-| **Framework** | Independent | PyTorch/CUDA |
-
-#### 🏗️ Architecture: 4 Fundamental Pillars
-
-##### 1. 🚫 NO Tokenization
-```python
-# TRADITIONAL: "Hello world" → [1234, 5678, 9012]
-# CHIMERA: "Hello world" → 512×64 Image directly
-```
-
-##### 2. 🔬 Pure Physics (Cellular Automata)
-```python
-# GPU Shaders simulate physical evolution
-# Each "pixel" represents a concept
-# Evolution replaces backpropagation
-```
-
-##### 3. 🧠 Holographic Memory
-```python
-# Learning through "imprinting" - no gradients needed
-# O(1) correlation - single GPU pass
-# Memory emerges from physics, not training
-```
-
-##### 4. ⚡ O(1) Generation
-```python
-# Complete generation in ONE GPU pass
-# No token-by-token like transformers
-# Complete thought = instant thought
-```
-
-#### 🎯 Complete Pipeline (5 Steps)
-
-```
-Text Input → Image → Physics → Memory → Text Output
-    ↓         ↓        ↓        ↓        ↓
- PIL Image  CA Engine  Holographic  Top-K    Pattern
- (512×64)   (Shaders)   Memory      Concepts Decoder
-```
-
-#### 💻 Practical Usage Example
+### Quick Start
 
 ```python
-# WITHOUT PyTorch, WITHOUT CUDA, WITHOUT frameworks!
 from chimera_v3 import OpenGLEngine
 
-# Create OpenGL engine
 engine = OpenGLEngine()
-
-# Process text as image
 text_image = text_to_image("What is AI?")
-
-# Physical evolution (Cellular Automata)
 evolved = engine.evolve_physics(text_image)
-
-# Holographic correlation
 concepts = memory.correlate(evolved)
-
-# O(1) generation
-response = generate_response(concepts)  # Instant!
+response = generate_response(concepts)
 ```
 
-#### 🌍 Universal Compatibility
+### Hardware Compatibility
 
-✅ **Intel UHD Graphics** (integrated graphics)
-✅ **AMD Radeon** (all generations)
-✅ **NVIDIA GeForce** (all generations)
-✅ **Apple M1/M2** (Metal backend)
-✅ **Raspberry Pi** (OpenGL ES)
+✅ Intel UHD Graphics (integrated) | ✅ AMD Radeon | ✅ NVIDIA GeForce | ✅ Apple M1/M2 (Metal) | ✅ Raspberry Pi (OpenGL ES)
 
-#### 📊 Real Benchmarks
+### Preliminary Benchmarks
 
-##### Extreme Performance
-- **Matrix Multiplication (2048×2048)**: 1.84ms vs 80.03ms (43.5× speedup)
-- **Self-Attention**: 1.8ms vs 45.2ms (25.1× speedup)
-- **Memory Total**: 510MB vs 4.5GB+ (9× less memory)
+Benchmarks below are **self-reported on RTX 3090** and require independent reproduction. See `benchmarks/` directory for methodology.
 
-##### Revolutionary Efficiency
-- **200× less code** than traditional frameworks
-- **Framework independent** - works on any GPU
-- **No CUDA** - no NVIDIA requirement
-- **No backpropagation** - learning through physics
+| Operation | CHIMERA v3.0 | PyTorch (CUDA) | Notes |
+|-----------|-------------|----------------|------|
+| Matrix Mult (2048×2048) | ~1.8ms | ~80ms | OpenGL compute shader vs cuBLAS |
+| Self-Attention (simulated) | ~1.8ms | ~45ms | CA-based approximation, not exact attention |
+| Memory Footprint | ~510MB | ~4.5GB | Excludes model weights on disk |
 
-#### 🚀 Impact on AI's Future
+> 💡 These numbers come from `demo_pure.py` on RTX 3090. Results vary significantly by GPU, workload, and OpenGL driver. A Docker-based reproducible benchmark suite is planned. See [CONTRIBUTING.md](CONTRIBUTING.md) to help validate.
 
-##### Why It's Revolutionary
-1. **🏠 Local-First**: All processing happens locally
-2. **⚡ Instant**: Complete thinking in one pass
-3. **🌍 Accessible**: Works on any modern hardware
-4. **🔬 Understandable**: Based on physics, not mathematical magic
-
-##### Potential Applications
-- **Ultra-fast chatbots** (instant response)
-- **Real-time language processing**
-- **Instant sentiment analysis**
-- **Real-time translation**
-- **Real-time creative generation**
-
-#### 🎓 Current Status
+### Current Status
 
 **CHIMERA v3.0 is in production** with:
 - ✅ **Complete architecture** working
@@ -161,10 +87,10 @@ response = generate_response(concepts)  # Instant!
 
 - AI is **instant** (not token-by-token)
 - AI is **universal** (works on any GPU)
-- AI is **efficient** (200× fewer resources)
+- AI is **efficient** (exploring resource reduction)
 - AI is **understandable** (based on real physics)
 
-**🚀 CHIMERA is not just a better framework - it's a complete revolution in how we understand and build artificial intelligence.**
+**🔮 CHIMERA is an experimental exploration of alternative approaches to AI computation — rendering-inspired, physics-based, and framework-independent.**
 
 *The future of AI is already here, and it's called CHIMERA.* 🌟
 
@@ -199,8 +125,8 @@ Optical flow    GPU parallelism    Persistent state
 #### Revolutionary Implications
 
 ##### Extreme Performance
-- **43× faster** because everything is in situ
-- **200× less memory** because no external transfer
+- **Potential speed advantage** from in-situ GPU computation
+- **Reduced memory** by eliminating host-to-device transfers
 - **Massive parallelism** like the brain (trillions of simultaneous connections)
 
 ##### Universal Compatibility
@@ -235,7 +161,7 @@ python chimera_v3/demo_pure.py
 **Output:**
 ```
 OpenGL Transformer Demo
-Matrix Multiplication: 43.57× speedup vs CPU
+Matrix Multiplication: ~43× speedup vs CPU (preliminary, see benchmarks/)
 Self-Attention Layer: 1.84ms on GPU
 FFN Layer: 0.92ms on GPU
 Complete Transformer: 15.2ms total
@@ -331,8 +257,8 @@ correlation = memory.correlate(input_pattern)  # O(1) correlation
 
 | Operation | PyTorch (CUDA) | CHIMERA (OpenGL) | Speedup |
 |-----------|----------------|------------------|---------|
-| Matrix Mult (2048×2048) | 80.03ms | 1.84ms | **43.5×** |
-| Self-Attention | 45.2ms | 1.8ms | **25.1×** |
+| Matrix Mult (2048×2048) | 80.03ms | 1.84ms | ~43× (preliminary) |
+| Self-Attention | 45.2ms | 1.8ms | ~25× (preliminary) |
 | FFN Layer | 23.1ms | 0.9ms | **25.7×** |
 | Full Generation | 500ms | 15ms | **33.3×** |
 
@@ -485,7 +411,7 @@ python setup.py develop
 - [x] Pure OpenGL transformer implementation
 - [x] Universal GPU compatibility
 - [x] Model conversion from PyTorch
-- [x] 43× performance improvement
+- [x] Performance benchmarking results (preliminary, reproduction welcome)
 - [x] Comprehensive documentation
 - [x] Production-ready demos
 

@@ -4,13 +4,13 @@ A comprehensive collection of demonstrations, benchmarks, and implementation gui
 
 ## 📚 About CHIMERA
 
-CHIMERA (Cognitive Hybrid Intelligence for Memory-Embedded Reasoning Architecture) represents a revolutionary approach to AI computation:
+CHIMERA (Cognitive Hybrid Intelligence for Memory-Embedded Reasoning Architecture) is an experimental approach to AI computation via GPU compute shaders:
 
-- **43× faster** than PyTorch-CUDA
-- **88.7% less memory** (510MB vs 4.5GB)
+- **OpenGL compute shader acceleration** (vs PyTorch-CUDA baseline)
+- **Reduced memory footprint** (~510MB vs ~4.5GB for equivalent workloads)
 - **Universal GPU support** (Intel, AMD, NVIDIA, Apple, ARM)
-- **Framework-free** (10MB vs 2.5GB+ dependencies)
-- **Real-time capable** (<50ms generation vs 500ms)
+- **Framework-light** (OpenGL ~10MB vs PyTorch ~2.5GB)
+- **Exploring real-time inference** (preliminary benchmarks)
 
 ### Two Revolutionary Architectures
 
