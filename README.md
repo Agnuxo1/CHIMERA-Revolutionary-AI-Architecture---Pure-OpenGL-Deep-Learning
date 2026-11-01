@@ -21,7 +21,11 @@
 
 ---
 
+**Contents** — [What is CHIMERA?](#what-is-chimera) · [Background](#background) · [🎯 Quick Start (5 Minutes)](#-quick-start-5-minutes) · [🏗️ Architecture Overview](#-architecture-overview) · [🚀 Performance Benchmarks](#-performance-benchmarks) · [📚 Documentation Structure](#-documentation-structure) · [🎮 Examples and Demos](#-examples-and-demos) · [🔧 Installation Options](#-installation-options) · [🤝 Contributing](#-contributing) · [📊 Project Status](#-project-status) · [🎓 Academic Impact](#-academic-impact) · [📞 Support and Community](#-support-and-community) · [Real-world applications](#real-world-applications) · [Observations and limitations](#observations-and-limitations) · [Possible improvements](#possible-improvements) · [📜 License](#-license) · [🙏 Acknowledgments](#-acknowledgments) · [🌟 The CHIMERA Vision](#-the-chimera-vision) · [Bibliography](#bibliography)
+
 ## What is CHIMERA?
+
+<p align="center"><img src="docs/readme/01-render-pass.gif" alt="Two NumPy arrays uploaded as textures, combined by a fragment shader into a framebuffer texture" width="100%"><br><sub>Fig. 1 — One draw call is one layer. Schematic of <code>demo_basic_math()</code> in chimera_v3/demo_pure.py.</sub></p>
 
 CHIMERA explores the use of **OpenGL compute shaders** as a backend for neural network operations, bypassing traditional frameworks like PyTorch and CUDA. By leveraging GPU texture operations and cellular automata, it investigates alternative approaches to matrix multiplication, attention mechanisms, and memory encoding.
 
@@ -36,6 +40,8 @@ Text Input → OpenGL Texture → Compute Shaders → Holographic Memory → Out
     ↓               ↓               ↓                 ↓              ↓
  PIL Image      512×64 grid     Cellular Automata   O(1) correlation  Pattern decoder
 ```
+
+<p align="center"><img src="docs/readme/02-ca-pass-real.gif" alt="The words What is AI? rendered into a texture, then passed through the cellular-automaton shader" width="100%"><br><sub>Fig. 2 — A real pass: the text texture through the cellular-automaton fragment shader of demos/demo_holographic_pure.py, run on software OpenGL (CPU).</sub></p>
 
 Key experimental techniques:
 
@@ -63,6 +69,8 @@ response = generate_response(concepts)
 ### Preliminary Benchmarks
 
 Benchmarks below are **self-reported on RTX 3090** and require independent reproduction. See `benchmarks/` directory for methodology.
+
+<sub>Note added with the animated figures: where the values in these tables come from is traced in [Observations and limitations](#observations-and-limitations) (Fig. 13).</sub>
 
 | Operation | CHIMERA v3.0 | PyTorch (CUDA) | Notes |
 |-----------|-------------|----------------|------|
@@ -102,6 +110,9 @@ Benchmarks below are **self-reported on RTX 3090** and require independent repro
 | "Texture Blending" | Matrix Multiplication |
 | "Color Correction" | Layer Normalization |
 | "Image Filter" | Self-Attention |
+
+<p align="center"><img src="docs/readme/03-multi-pass.gif" alt="Passes chained through two textures on the GPU, contrasted with a round trip to the CPU after every pass" width="100%"><br><sub>Fig. 3 — Chaining passes without leaving the GPU. Schematic of the design goal described below.</sub></p>
+
 ### 🧠 CHIMERA = Neuromorphic Brain in GPU
 
 **CHIMERA uses the full graphics potential of any GPU or APU as if it were a neuromorphic processor where states and memory live in a closed loop within the GPU without needing to waste time reading external hardware like RAM, HDD, etc... Simulating the functioning of a kind of living brain that works with applied optical physics.**
@@ -139,7 +150,43 @@ Optical flow    GPU parallelism    Persistent state
 - **Real-time AI** (instant thinking)
 - **Energy-efficient AI** (like the human brain)
 
+## Background
+
+<p align="center"><img src="docs/readme/04-background.gif" alt="Animated timeline from holography in 1948 to this repository in 2025" width="100%"><br><sub>Fig. 4 — Milestones behind the ideas in this README. Sources: the bibliography below.</sub></p>
+
+Computing with graphics hardware is older than CUDA. Larsen and McAllister multiplied large matrices on low-cost
+graphics hardware by literally rendering the steps of a simple parallel algorithm, and noted that the limited
+precision of the hardware of the day held the technique back [[2](#ref-2)]. Krüger and Westermann proposed a framework
+of linear-algebra operators for programmable GPUs, a stream model for vector and matrix arithmetic on which more
+complex numerical solvers could be built [[3](#ref-3)]. Fatahalian and colleagues then showed why this is harder than
+it looks: dense matrix multiplication reuses every input element many times, and even near-optimal GPU versions of
+that era were less efficient than cache-aware CPU code, because the GPU could fetch less data per clock than it
+could compute on [[4](#ref-4)]. Owens and colleagues surveyed the techniques for mapping general-purpose computation
+onto graphics hardware [[1](#ref-1)]. The OpenGL 4.6 specification defines the fragment and compute shader stages and
+the image load/store operations that the shaders in this repository use [[14](#ref-14)].
+
+Neural networks followed the same path. Oh and Jung moved the matrix products of a neural network onto a GPU to
+speed up a text-detection system [[5](#ref-5)]; Steinkraus, Buck and Simard implemented a two-layer fully connected
+network on a GPU and reported more than a threefold speed-up over a 3 GHz CPU for training and testing
+[[6](#ref-6)]; Raina, Madhavan and Ng used graphics processors for deep belief networks and sparse coding, whose
+learning algorithms were too slow for large-scale use on CPUs [[7](#ref-7)]. TensorFlow.js later brought model
+execution to the browser and Node.js with an API compatible with the Python ecosystem [[8](#ref-8)]. The attention
+layers this README refers to are those of the Transformer [[9](#ref-9)].
+
+CHIMERA's other vocabulary comes from physics and from memory models. Gabor proposed recording the interference
+of a wavefront with a coherent background and reconstructing the object from that record, the principle of
+holography [[10](#ref-10)]. Plate's holographic reduced representations associate vectors by circular convolution, so
+that bindings, sequences and simple frames fit in one fixed-width vector, with noisy reconstructions cleaned up by
+a separate associative memory [[11](#ref-11)]. Wolfram analysed elementary cellular automata, in which each site
+evolves by a fixed rule over its nearest neighbours, as simple models of self-organisation [[12](#ref-12)], and
+Mordvintsev and colleagues trained differentiable cellular-automaton update rules that grow and regenerate a
+target pattern [[13](#ref-13)]. The author's earlier public repositories explore holographic neural networks
+[[16](#ref-16)] and GPU-native neuromorphic computing [[17](#ref-17)]. The runs shown in Figs. 2 and 5 use Mesa's llvmpipe,
+a software rasteriser that executes OpenGL on the CPU [[15](#ref-15)], so they needed no GPU at all.
+
 ## 🎯 Quick Start (5 Minutes)
+
+<p align="center"><img src="docs/readme/05-quickstart-run.gif" alt="Terminal: installing moderngl, then running the repository's shader code on Mesa llvmpipe" width="100%"><br><sub>Fig. 5 — A real run of the repository's shader code on a CPU, with no GPU and no window.</sub></p>
 
 ### Installation
 
@@ -203,6 +250,8 @@ print(output)  # Complete response in milliseconds!
 
 ## 🏗️ Architecture Overview
 
+<p align="center"><img src="docs/readme/06-pipeline.gif" alt="The six v3.0 stages, with chips naming the functions that implement three of them" width="100%"><br><sub>Fig. 6 — The v3.0 diagram below, and where each stage has code in this repository.</sub></p>
+
 ### Three Generations of CHIMERA
 
 | Version | Paradigm | Dependencies | GPU Support | Status |
@@ -221,6 +270,8 @@ Input Text → Text to Image → Physics Evolution → Holographic Correlation �
 ```
 
 ### Key Components
+
+<p align="center"><img src="docs/readme/07-texels.gif" alt="A 4 by 4 matrix packed into RGBA texels, one value per texel or four per texel" width="100%"><br><sub>Fig. 7 — How a matrix sits in an RGBA float texture. Illustrative layout.</sub></p>
 
 #### 1. **TextureTensor** - The Foundation
 ```python
@@ -252,6 +303,8 @@ correlation = memory.correlate(input_pattern)  # O(1) correlation
 ---
 
 ## 🚀 Performance Benchmarks
+
+<sub>Note added with the animated figures: where the values in these tables come from is traced in [Observations and limitations](#observations-and-limitations) (Fig. 13).</sub>
 
 ### Speed Comparison (RTX 3090)
 
@@ -300,6 +353,8 @@ correlation = memory.correlate(input_pattern)  # O(1) correlation
 
 ## 🎮 Examples and Demos
 
+<p align="center"><img src="docs/readme/08-demos-run.gif" alt="Terminal: five demo scripts each exiting with code 0 and their wall-clock times" width="100%"><br><sub>Fig. 8 — Five scripts in demos/ run end to end on a plain CPU (real local run).</sub></p>
+
 ### Basic Examples
 
 ```bash
@@ -343,6 +398,8 @@ python examples/benchmark_suite.py
 
 ## 🔧 Installation Options
 
+<p align="center"><img src="docs/readme/09-install-stack.gif" alt="Python, three packages and an OpenGL context, branching to a GPU driver or to Mesa llvmpipe" width="100%"><br><sub>Fig. 9 — Three Python packages and an OpenGL driver; the software path was run for this README.</sub></p>
+
 ### Option 1: Minimal Install (Recommended)
 
 ```bash
@@ -377,6 +434,8 @@ docker run -p 8080:8080 chimera-ai
 
 ## 🤝 Contributing
 
+<p align="center"><img src="docs/readme/10-contributing.gif" alt="Six cards: research, optimization, compatibility, documentation, testing, benchmark reproduction" width="100%"><br><sub>Fig. 10 — Where help is asked for, as listed in this section and in the notice at the top.</sub></p>
+
 We welcome contributions from the community! Here's how you can help:
 
 ### Development Setup
@@ -406,6 +465,8 @@ python setup.py develop
 ---
 
 ## 📊 Project Status
+
+<p align="center"><img src="docs/readme/11-status.gif" alt="Track of eight open items: four in progress, four on the future roadmap" width="100%"><br><sub>Fig. 11 — Open items, as this README lists them.</sub></p>
 
 ### ✅ Completed (v3.0)
 - [x] Pure OpenGL transformer implementation
@@ -467,6 +528,91 @@ CHIMERA represents a paradigm shift in deep learning:
 
 ---
 
+## Real-world applications
+
+<p align="center"><img src="docs/readme/12-applications.gif" alt="Six cards of potential uses for render-pass computation" width="100%"><br><sub>Fig. 12 — Potential uses only. Beyond the runs in Figs. 2 and 5, none is demonstrated in this repository.</sub></p>
+
+These are directions the code could serve, not deployments; each would first need the corrections listed under
+[Possible improvements](#possible-improvements).
+
+- **Teaching GPU computing.** The shaders here are short and readable: two textures in, one shader program, one
+  texture out (Fig. 1). That is the core idea of general-purpose GPU computing [[1](#ref-1), [3](#ref-3)] in a few lines of
+  GLSL and Python.
+- **GPU-free shader tests.** Software OpenGL ran the repository's fragment and compute shaders on a CPU for this
+  README [[15](#ref-15)], so shader code can be checked in an ordinary CI job without a graphics card.
+- **Texture filters.** A neighbourhood pass such as the cellular-automaton shader (Fig. 2) is an image filter;
+  diffusion, blurs and other local update rules [[12](#ref-12), [13](#ref-13)] follow the same pattern.
+- **Browser prototypes.** WebGL support is listed as In Progress; it is one of the backends TensorFlow.js uses to
+  run models in a browser [[8](#ref-8)].
+- **Integrated GPUs and small devices.** Hardware with OpenGL drivers but no CUDA is the target this README names.
+  No run on such a device is recorded in the repository.
+- **Associative-memory experiments.** Holographic-style memories [[11](#ref-11)] stored as textures are a research
+  direction; the holograms in the current demo are random patterns (see below).
+
+## Observations and limitations
+
+The figures above show what runs. This section records, without changing the text above, what a CPU run of the
+published code shows and which statements in this README have no file behind them.
+
+<p align="center"><img src="docs/readme/13-benchmark-provenance.gif" alt="Flow from fixed base_time constants in a script, through the results JSON, to the README tables" width="100%"><br><sub>Fig. 13 — Where the benchmark tables come from. Data: demos/chimera_benchmark_comparison.py, demos/chimera_benchmark_results.json, demos/DEMO_OFFICIAL_RESULTS.md.</sub></p>
+
+- **The benchmark and memory figures are constants.** `demos/chimera_benchmark_results.json` is written by
+  `demos/chimera_benchmark_comparison.py`, whose classes return fixed `base_time` values (lines 25-74) scaled by
+  input size; the memory totals (510 MB and 4500 MB) are fixed too (lines 188-198), and the script starts no timer.
+  Re-running it on a CPU on 01 Nov 2026 reproduced the committed JSON byte for byte.
+  [`demos/DEMO_OFFICIAL_RESULTS.md`](demos/DEMO_OFFICIAL_RESULTS.md) says the results are simulated and that no
+  OpenGL shader was executed. The README attributes the numbers to `demo_pure.py` on an RTX 3090 and points to a
+  `benchmarks/` directory; neither contains them (the directory is not in the repository).
+
+<p align="center"><img src="docs/readme/14-cpu-run-findings.gif" alt="Six findings from running the published code on software OpenGL" width="100%"><br><sub>Fig. 14 — What a CPU run of the published code shows. Data: the captures named in the figure.</sub></p>
+
+- **9 of the 20 tracked Python files stop at a SyntaxError** under Python 3.13.7, among them
+  `chimera_v3/demo_pure.py` (the Quick Start demo), `demos/demo_holographic_pure.py`, `demos/demo_main.py`, both
+  scripts in `examples/` and four of the five test scripts in `tests/`.
+- **Texture uploads.** `demo_pure.py` and `tests/test_matmul_correctness.py` write one float per texel into
+  4-channel float textures; moderngl rejects this (`data size mismatch 40000 != 160000`).
+- **Matrix multiplication.** With the uploads padded to RGBA by a harness written for this README, the compute
+  shaders in `tests/test_matmul_correctness.py` compile and run, and fail all 12 sizes against NumPy (9 square,
+  3 non-square; maximum errors from 3.70e-02 to 1.07e+00).
+- **The cellular-automaton loop** in `demos/demo_holographic_pure.py` renders twice from the same input texture,
+  so two iterations equal one (maximum difference 0.0). Its holograms are random 64 × 64 × 4 patterns, and the
+  correlation step is a mean absolute difference computed in NumPy.
+- **What works.** That cellular-automaton fragment shader and the `a + b` shader of `demo_basic_math()` run on
+  Mesa llvmpipe and return the expected outputs (Figs. 2 and 5).
+- **Statements with no file behind them.** The `OpenGLEngine`, `TextureTensor` and `QwenOpenGL` classes, the
+  `RetinaEngine`, `HolographicMemory` and `HolographicGenerator` names listed in `chimera_v3/__init__.py`, `chimera_v3/tools/convert_model.py`, the seven example scripts listed under Examples and Demos
+  other than the two in `examples/`, `requirements.txt`, `requirements-dev.txt`, the Dockerfile, and six of the
+  nine documents under Documentation Structure are not in the repository. No run on any device of the hardware
+  compatibility list is recorded. The Quick Start output block, the Academic Impact items (publications in
+  preparation, recognition, patent applications) and the external community links were not verified for this
+  README; `CITATION.cff` carries placeholder identifiers (`arxiv.org/abs/2410.xxxxx`, ORCID
+  `0000-0000-0000-0000`).
+
+All runs: `demos/` scripts on Windows (Python 3.13.7, numpy 2.5.4); OpenGL code on a Debian server with Mesa
+25.0.7 llvmpipe and moderngl 5.12.0, CPU only. Files that do not compile as a whole were exercised by executing
+only the functions named above, verbatim.
+
+## Possible improvements
+
+<p align="center"><img src="docs/readme/15-improvements.gif" alt="Measured gaps on the left turning into proposed next steps on the right" width="100%"><br><sub>Fig. 15 — Each line answers a finding in Observations and limitations. None is claimed as started.</sub></p>
+
+- **Make every file compile.** Fix the nine parse errors and add `python -m compileall` to a CI job, so the
+  Quick Start demo runs as written.
+- **Upload what the texture expects.** Write RGBA arrays, as `demo_holographic_pure.py` already does, or create
+  1-component float textures; either removes the size mismatch.
+- **A correct matmul shader, then a correctness table.** Loop over the shared dimension, compare against NumPy
+  at every size, and publish the passing table; the precision and bandwidth limits documented for GPU matrix
+  multiplication [[2](#ref-2), [4](#ref-4)] are the relevant baseline.
+- **Chain the passes.** Ping-pong two framebuffers so pass k + 1 reads the output of pass k (Fig. 3), and only
+  then measure what a closed loop on the GPU saves.
+- **Replace constants with timings.** Time real dispatches with `ctx.finish()`, commit the raw output with the
+  GPU, driver and OpenGL version named, and keep the software-OpenGL run as a reproducible floor.
+
+**Proposed next steps (not commitments).** These are suggestions from this README build, not the author's
+published plan: a CI job that compiles every file and runs the shader tests on Mesa llvmpipe; a single module
+that implements the texture-as-tensor operations the README describes, with NumPy reference tests; and one timed
+benchmark on named hardware whose raw output is committed next to the results file.
+
 ## 📜 License
 
 CHIMERA is released under the **MIT License**. See [LICENSE](LICENSE) for details.
@@ -522,4 +668,32 @@ CHIMERA is released under the **MIT License**. See [LICENSE](LICENSE) for detail
 
 **Made with ❤️ and OpenGL shaders**
 
+</div>
+
+## Bibliography
+
+1. <a id="ref-1"></a>Owens, J. D., Luebke, D., Govindaraju, N., et al. (2007). A Survey of General‐Purpose Computation on Graphics Hardware. *Computer Graphics Forum*, 26(1), 80–113. https://doi.org/10.1111/j.1467-8659.2007.01012.x
+2. <a id="ref-2"></a>Larsen, E. S., & McAllister, D. (2001). Fast matrix multiplies using graphics hardware. *Proceedings of the 2001 ACM/IEEE conference on Supercomputing*, 55–55. https://doi.org/10.1145/582034.582089
+3. <a id="ref-3"></a>Krüger, J., & Westermann, R. (2003). Linear algebra operators for GPU implementation of numerical algorithms. *ACM Transactions on Graphics*, 22(3), 908–916. https://doi.org/10.1145/882262.882363
+4. <a id="ref-4"></a>Fatahalian, K., Sugerman, J., & Hanrahan, P. (2004). Understanding the efficiency of GPU algorithms for matrix-matrix multiplication. *Proceedings of the ACM SIGGRAPH/EUROGRAPHICS conference on Graphics hardware*, 133–137. https://doi.org/10.1145/1058129.1058148
+5. <a id="ref-5"></a>Oh, K., & Jung, K. (2004). GPU implementation of neural networks. *Pattern Recognition*, 37(6), 1311–1314. https://doi.org/10.1016/j.patcog.2004.01.013
+6. <a id="ref-6"></a>Steinkraus, D., Buck, I., & Simard, P.Y. (2005). Using GPUs for machine learning algorithms. *Eighth International Conference on Document Analysis and Recognition (ICDAR'05)*, 1115–1120 Vol. 2. https://doi.org/10.1109/ICDAR.2005.251
+7. <a id="ref-7"></a>Raina, R., Madhavan, A., & Ng, A. Y. (2009). Large-scale deep unsupervised learning using graphics processors. *Proceedings of the 26th Annual International Conference on Machine Learning*, 873–880. https://doi.org/10.1145/1553374.1553486
+8. <a id="ref-8"></a>Smilkov, D., Thorat, N., Assogba, Y., et al. (2019). TensorFlow.js: Machine Learning for the Web and Beyond. *arXiv* 1901.05350. https://arxiv.org/abs/1901.05350
+9. <a id="ref-9"></a>Vaswani, A., Shazeer, N., Parmar, N., et al. (2017). Attention Is All You Need. *arXiv* 1706.03762. https://arxiv.org/abs/1706.03762
+10. <a id="ref-10"></a>GABOR, D. (1948). A New Microscopic Principle. *Nature*, 161(4098), 777–778. https://doi.org/10.1038/161777a0
+11. <a id="ref-11"></a>Plate, T.A. (1995). Holographic reduced representations. *IEEE Transactions on Neural Networks*, 6(3), 623–641. https://doi.org/10.1109/72.377968
+12. <a id="ref-12"></a>Wolfram, S. (1983). Statistical mechanics of cellular automata. *Reviews of Modern Physics*, 55(3), 601–644. https://doi.org/10.1103/RevModPhys.55.601
+13. <a id="ref-13"></a>Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M. (2020). Growing Neural Cellular Automata. *Distill*, 5(2). https://doi.org/10.23915/distill.00023
+14. <a id="ref-14"></a>Segal, M., & Akeley, K. (2022). *The OpenGL Graphics System: A Specification, Version 4.6 (Core Profile)*. The Khronos Group, OpenGL Registry. https://registry.khronos.org/OpenGL/index_gl.php
+15. <a id="ref-15"></a>The Mesa 3D Graphics Library (2026). *LLVMpipe* (software rasterizer driver documentation). https://docs.mesa3d.org/drivers/llvmpipe.html
+16. <a id="ref-16"></a>Angulo de Lafuente, F. (2024). *Unified-Holographic-Neural-Network*. GitHub. https://github.com/Agnuxo1/Unified-Holographic-Neural-Network
+17. <a id="ref-17"></a>Angulo de Lafuente, F. (2025). *NeuroCHIMERA: GPU-native neuromorphic computing framework*. GitHub. https://github.com/Agnuxo1/NeuroCHIMERA__GPU-Native_Neuromorphic_Consciousness
+
+---
+
+<div align="center">
+<sub>Built by <a href="https://github.com/Agnuxo1">Francisco Angulo de Lafuente</a> · each animated figure renders
+the published file or the real run named in its footer ·
+<a href="#chimera-opengl-accelerated-neural-computing-experimental">back to top ↑</a></sub>
 </div>
