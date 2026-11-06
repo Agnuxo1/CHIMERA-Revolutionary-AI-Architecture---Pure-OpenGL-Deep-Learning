@@ -15,6 +15,9 @@
   **No PyTorch, no CUDA — universal GPU support via OpenGL.**
 </div>
 
+**Author:** Francisco Angulo de Lafuente · **ORCID:** [0009-0001-1634-7063](https://orcid.org/0009-0001-1634-7063) · **Copyright:** © 2024 Francisco Angulo de Lafuente<br>
+**Attribution record:** 2026-11-06
+
 ---
 
 > ⚠️ **Research Prototype Notice:** CHIMERA is an experimental research project exploring GPU compute shader acceleration for neural network operations. Performance claims are preliminary and based on early benchmarks. The project is under active development and has not undergone independent third-party validation. Contributions, benchmark reproduction, and constructive feedback are welcome.
@@ -515,9 +518,9 @@ CHIMERA represents a paradigm shift in deep learning:
 
 ### Getting Help
 
-- **📖 Documentation**: [docs.chimera.ai](https://docs.chimera.ai)
+- **📖 Documentation**: [Documentation](https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning/tree/main/docs)
 - **💬 Discord**: [Join our community](https://discord.gg/chimera-ai)
-- **🐛 Issues**: [GitHub Issues](https://github.com/chimera-ai/chimera/issues)
+- **🐛 Issues**: [GitHub Issues](https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning/issues)
 - **📧 Email**: support@chimera.ai
 
 ### Community Resources
@@ -585,8 +588,8 @@ published code shows and which statements in this README have no file behind the
   nine documents under Documentation Structure are not in the repository. No run on any device of the hardware
   compatibility list is recorded. The Quick Start output block, the Academic Impact items (publications in
   preparation, recognition, patent applications) and the external community links were not verified for this
-  README; `CITATION.cff` carries placeholder identifiers (`arxiv.org/abs/2410.xxxxx`, ORCID
-  `0000-0000-0000-0000`).
+  README; the 2026-11-06 attribution update corrected the CFF author ORCID and canonical
+  repository URL and removed unverified preprint identifiers. No paper DOI or publication record was added.
 
 All runs: `demos/` scripts on Windows (Python 3.13.7, numpy 2.5.4); OpenGL code on a Debian server with Mesa
 25.0.7 llvmpipe and moderngl 5.12.0, CPU only. Files that do not compile as a whole were exercised by executing
@@ -613,19 +616,18 @@ published plan: a CI job that compiles every file and runs the shader tests on M
 that implements the texture-as-tensor operations the README describes, with NumPy reference tests; and one timed
 benchmark on named hardware whose raw output is committed next to the results file.
 
-## 📜 License
+## 📜 License and citation
 
-CHIMERA is released under the **MIT License**. See [LICENSE](LICENSE) for details.
+The root [LICENSE](LICENSE) is MIT. See [LICENSE_SCOPE.md](LICENSE_SCOPE.md) for the scope of this attribution record and the status of preserved papers, archives, images, result data, and third-party text. Cite the software through [CITATION.cff](CITATION.cff). The repository does not document a separate commercial license.
 
-### Commercial Use
-- ✅ **Allowed**: Use in commercial products
-- ✅ **Encouraged**: Build businesses around CHIMERA
-- ✅ **Supported**: Commercial licensing available
+For original source code covered by the root MIT license, retain this reuse notice:
 
-### Academic Use
-- ✅ **Free**: Academic research and teaching
-- ✅ **Open**: All code and documentation available
-- ✅ **Collaborative**: Research partnerships welcome
+> This project contains open-source material under the MIT License. When
+> redistributing copies or substantial portions, retain the copyright and
+> permission notices. If you build on this work, please cite the project and
+> credit Francisco Angulo de Lafuente (ORCID: 0009-0001-1634-7063).
+> Help advance scientific knowledge: we welcome reproducible results,
+> corrections, and contributions.
 
 ---
 

@@ -368,6 +368,9 @@ This implementation is based on:
    - [See: CHIMERA_Revolutionary_AI_Architecture.pdf]
 
 **Author**: Francisco Angulo de Lafuente  
+**ORCID**: [0009-0001-1634-7063](https://orcid.org/0009-0001-1634-7063)<br>
+**Copyright**: © 2024 Francisco Angulo de Lafuente<br>
+**Attribution record**: 2026-11-06<br>
 **Contact**: See GitHub repositories for details
 
 ---
@@ -408,29 +411,15 @@ We welcome contributions! Priority areas:
 
 ## 📝 Citation
 
-If you use this work, please cite:
+For the software, cite [CITATION.cff](../CITATION.cff). The BibTeX records previously shown here had no verified publication identifiers and have been removed rather than presented as published articles.
 
-```bibtex
-@article{angulo2025chimera,
-  title={CHIMERA: A Neuromorphic GPU-Native Intelligence System for Abstract Reasoning},
-  author={Angulo de Lafuente, Francisco},
-  journal={ARC Prize 2025 Competition Entry},
-  year={2025}
-}
-
-@article{angulo2025chimera_dl,
-  title={CHIMERA: A Revolutionary OpenGL-Based Deep Learning Architecture},
-  author={Angulo de Lafuente, Francisco},
-  journal={arXiv preprint},
-  year={2025}
-}
-```
+The linked paper artifacts are preserved. The HTML states that the manuscript was submitted to Nature Machine Intelligence / IEEE Transactions on Neural Networks and Learning Systems; acceptance, publication, and DOI were not verified. This repository contains no ARC Prize Kaggle submission ID, so the ARC Prize 2025 entry and eligibility are unverified. See [BENCHMARK_PROVENANCE.md](../BENCHMARK_PROVENANCE.md) and the [official ARC Prize 2025 archive](https://arcprize.org/competitions/2025/archive).
 
 ---
 
 ## 📄 License
 
-See individual repositories for license information.
+The original source code covered by the root MIT License is subject to its notice. See [LICENSE_SCOPE.md](../LICENSE_SCOPE.md) for the scope of this attribution record and the unresolved status of papers and bundled assets.
 
 ---
 

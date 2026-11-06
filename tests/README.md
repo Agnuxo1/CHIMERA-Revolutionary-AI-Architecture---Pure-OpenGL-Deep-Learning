@@ -1,3 +1,11 @@
+<!--
+Project: CHIMERA
+Author: Francisco Angulo de Lafuente
+ORCID: https://orcid.org/0009-0001-1634-7063
+Copyright (c) 2024 Francisco Angulo de Lafuente
+Attribution record: 2026-11-06
+-->
+
 # 🧪 CHIMERA Tests Suite
 
 This directory contains comprehensive tests for the CHIMERA v3.0 architecture.
@@ -299,7 +307,7 @@ def benchmark_new_operation():
 
 - 📖 Check [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines
 - 💬 Ask in [Discord](https://discord.gg/chimera-ai) #testing channel
-- 🐛 Report issues in [GitHub Issues](https://github.com/chimera-ai/chimera/issues)
+- 🐛 Report issues in [GitHub Issues](https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning/issues)
 - 📧 Email: testing@chimera.ai
 
 ---

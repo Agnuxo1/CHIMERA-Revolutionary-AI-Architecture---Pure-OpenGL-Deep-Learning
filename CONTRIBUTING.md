@@ -1,3 +1,11 @@
+<!--
+Project: CHIMERA
+Author: Francisco Angulo de Lafuente
+ORCID: https://orcid.org/0009-0001-1634-7063
+Copyright (c) 2024 Francisco Angulo de Lafuente
+Attribution record: 2026-11-06
+-->
+
 # 🤝 Contributing to CHIMERA
 
 **Welcome to the CHIMERA project!** We're excited that you're interested in contributing to this revolutionary AI architecture.
@@ -43,8 +51,8 @@ Virtual environment tool (venv/conda)
 **Clone and Setup:**
 ```bash
 # Clone repository
-git clone https://github.com/chimera-ai/chimera.git
-cd chimera
+git clone https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning.git
+cd CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning
 
 # Create virtual environment
 python -m venv chimera-dev
@@ -115,7 +123,7 @@ git push origin feature/amazing-new-feature
 ```
 
 **Create Pull Request:**
-1. Go to [GitHub Repository](https://github.com/chimera-ai/chimera)
+1. Go to [GitHub Repository](https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning)
 2. Click "New Pull Request"
 3. Select your feature branch
 4. Fill out the PR template
@@ -230,7 +238,7 @@ CHIMERA is at the forefront of AI research. Here are areas where research contri
 - Scientific computing
 
 **Research Contribution Process:**
-1. **Propose**: Discuss ideas in GitHub Discussions or Discord
+1. **Propose**: Open a [GitHub Issue](https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning/issues) describing the idea
 2. **Implement**: Create working prototype
 3. **Evaluate**: Comprehensive testing and benchmarks
 4. **Document**: Write research paper or technical report
@@ -269,7 +277,7 @@ Any other relevant information
 ```
 
 **Before Reporting:**
-- Check existing [GitHub Issues](https://github.com/chimera-ai/chimera/issues)
+- Check existing [GitHub Issues](https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning/issues)
 - Try the latest development version
 - Test on different hardware if possible
 
@@ -325,9 +333,9 @@ Documentation is crucial for CHIMERA's success. Help us make it the best-documen
 - #help: Get help with issues
 
 **💼 GitHub:**
-- [Issues](https://github.com/chimera-ai/chimera/issues): Bug reports and features
-- [Discussions](https://github.com/chimera-ai/chimera/discussions): Q&A and ideas
-- [Projects](https://github.com/chimera-ai/chimera/projects): Development tracking
+- [Issues](https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning/issues): Bug reports and features
+- Q&A and ideas: open a [GitHub Issue](https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning/issues)
+- [Projects](https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning/projects): Development tracking
 
 **📧 Email:**
 - General: info@chimera.ai
@@ -445,9 +453,9 @@ Thank you for considering contributing to CHIMERA! Every contribution, no matter
 
 **Questions? Need help getting started?**
 
-- 📖 Check our [documentation](https://docs.chimera.ai)
+- 📖 Check our [documentation](https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning/tree/main/docs)
 - 💬 Join our [Discord](https://discord.gg/chimera-ai)
-- 🐛 Browse [GitHub Issues](https://github.com/chimera-ai/chimera/issues)
+- 🐛 Browse [GitHub Issues](https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning/issues)
 - 📧 Email us at [contribute@chimera.ai](mailto:contribute@chimera.ai)
 
 **Happy contributing! 🚀**
