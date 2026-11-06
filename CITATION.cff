@@ -2,14 +2,15 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
 title: "CHIMERA: Pure OpenGL Deep Learning"
-abstract: "A revolutionary AI architecture that runs transformers entirely on OpenGL without requiring PyTorch, CUDA, or traditional deep learning frameworks."
+abstract: "Experimental Python demos exploring neural-network operations with OpenGL GPU compute shaders."
 authors:
   - family-names: "Angulo de Lafuente"
     given-names: "Francisco"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
+    orcid: "https://orcid.org/0009-0001-1634-7063"
     affiliation: "Independent Researcher"
-repository-code: "https://github.com/chimera-ai/chimera"
-url: "https://github.com/chimera-ai/chimera"
+version: "3.0.0"
+repository-code: "https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning"
+url: "https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning"
 license: MIT
 keywords:
   - deep-learning
@@ -23,21 +24,3 @@ keywords:
   - natural-language-processing
   - holographic-memory
   - cellular-automata
-preferred-citation:
-  type: article
-  title: "CHIMERA: Rendering IS Thinking - Deep Learning Without Frameworks"
-  authors:
-    - family-names: "Angulo de Lafuente"
-      given-names: "Francisco"
-  year: 2024
-  journal: "arXiv preprint"
-  url: "https://arxiv.org/abs/2410.xxxxx"
-references:
-  - type: article
-    title: "Holographic Memory: Learning Without Backpropagation"
-    authors:
-      - family-names: "Angulo de Lafuente"
-        given-names: "Francisco"
-    year: 2024
-    journal: "arXiv preprint"
-    url: "https://arxiv.org/abs/2410.xxxxx"

@@ -1,0 +1,30 @@
+{
+  "project": "CHIMERA: Pure OpenGL Deep Learning",
+  "author": "Francisco Angulo de Lafuente",
+  "orcid": "https://orcid.org/0009-0001-1634-7063",
+  "copyright_year": "2024",
+  "recorded_on": "2026-11-06",
+  "canonical_url": "https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning",
+  "version": "3.0.0",
+  "license_scope": "Existing root MIT preserved. Attribution/SPDX additions cover original repository source/configuration only; see LICENSE_SCOPE.md. No new license grant or contest-eligibility claim.",
+  "baseline": {
+    "commit": "2d072196df1376e239ece8165438bf9c40a92521",
+    "tree": "6b7ce0307d090f3f7fa79b1d4e60fdf7d4987d1a",
+    "manifest": "provenance-baseline.json",
+    "original_git_blobs": 55
+  },
+  "publication_status": {
+    "manuscript": "HTML states submitted to Nature Machine Intelligence / IEEE TNNLS; acceptance/publication/DOI unverified",
+    "arc_prize_2025": "README reference present; Kaggle submission ID and eligibility unverified"
+  },
+  "preserved_artifacts": [
+    "LICENSE",
+    "CHIMERA_Revolutionary_AI_Architecture.pdf",
+    "CHIMERA_Revolutionary_AI_Architecture (1).html",
+    "CHIMERA_GITHUB.rar",
+    "demos/chimera_benchmark_results.json",
+    "docs/readme/*.gif",
+    "CODE_OF_CONDUCT.md",
+    "SECURITY.md"
+  ]
+}

@@ -1,3 +1,10 @@
+# Project: CHIMERA
+# Author: Francisco Angulo de Lafuente
+# ORCID: https://orcid.org/0009-0001-1634-7063
+# Copyright (c) 2024 Francisco Angulo de Lafuente
+# Attribution record: 2026-11-06
+# SPDX-License-Identifier: MIT
+
 """
 CHIMERA v3.0 - Pure OpenGL Deep Learning
 ========================================
@@ -7,7 +14,7 @@ Setup configuration for the CHIMERA AI architecture.
 This is the first deep learning framework that runs entirely on OpenGL
 without requiring PyTorch, CUDA, or any traditional ML frameworks.
 
-For more information, see: https://github.com/chimera-ai/chimera
+For more information, see: https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning
 """
 
 from setuptools import setup, find_packages
@@ -39,19 +46,17 @@ setup(
     name="chimera-ai",
     version="3.0.0",
     author="Francisco Angulo de Lafuente",
-    author_email="francisco.angulo@example.com",
     description="Pure OpenGL Deep Learning - Transformers Without PyTorch",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/chimera-ai/chimera",
+    url="https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning",
     project_urls={
-        "Documentation": "https://docs.chimera.ai",
-        "Source": "https://github.com/chimera-ai/chimera",
-        "Tracker": "https://github.com/chimera-ai/chimera/issues",
+        "Documentation": "https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning/tree/main/docs",
+        "Source": "https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning",
+        "Tracker": "https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning/issues",
         "Community": "https://discord.gg/chimera-ai",
     },
     classifiers=[
-        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "Intended Audience :: Science/Research",
         "Intended Audience :: Education",

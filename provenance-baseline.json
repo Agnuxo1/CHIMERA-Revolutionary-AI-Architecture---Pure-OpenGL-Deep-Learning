@@ -1,0 +1,374 @@
+{
+  "repository": "Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning",
+  "canonical_url": "https://github.com/Agnuxo1/CHIMERA-Revolutionary-AI-Architecture---Pure-OpenGL-Deep-Learning",
+  "baseline_branch": "main",
+  "baseline_commit": "2d072196df1376e239ece8165438bf9c40a92521",
+  "baseline_tree": "6b7ce0307d090f3f7fa79b1d4e60fdf7d4987d1a",
+  "recorded_on": "2026-11-06",
+  "original_blob_count": 55,
+  "files": [
+    {
+      "path": ".gitignore",
+      "git_oid": "5f9c1a627f7cc73bd505e88e6d49a426896943aa",
+      "size_bytes": 2111,
+      "sha256": "590b0e00f431f09adc713fbbf83b6c4d4bb6c10fe087223332985c5b7679dca8"
+    },
+    {
+      "path": "CHIMERA_GITHUB.rar",
+      "git_oid": "1192d3126cf65127b21ced2391477af701f077e5",
+      "size_bytes": 67102,
+      "sha256": "f54aba21b6d0138cdcdd387f9b127b94ee0ab5917c7c147993aa1f278c6107af"
+    },
+    {
+      "path": "CHIMERA_Revolutionary_AI_Architecture (1).html",
+      "git_oid": "7e983750907392334b6821108dda75264f0383a3",
+      "size_bytes": 120801,
+      "sha256": "14502dfe01c25597124d3d59d8263604f277a17136c3ad0f323c6f930dab87cd"
+    },
+    {
+      "path": "CHIMERA_Revolutionary_AI_Architecture.pdf",
+      "git_oid": "d4e388d1a7297064c92bb798c2304c320c627f8a",
+      "size_bytes": 228274,
+      "sha256": "9d6a10ae78205bad3ca5a4f86bba31024a2ce9d6008d8e74c9663ddc4573de27"
+    },
+    {
+      "path": "CITATION.cff",
+      "git_oid": "aeb7cb05e87904e3323226e7b8a067ea8073ce2e",
+      "size_bytes": 1378,
+      "sha256": "496c25768dcfe14ee723b115092e4fe9eee79760a4313ecc2ed2265664def34c"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "git_oid": "3c3443a8bfa59310401b267dbe479700759f69e7",
+      "size_bytes": 5194,
+      "sha256": "6f4306e5946e2c8f0c2ee3304d36a58ab95731087caa998a15eada1022b2909b"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "git_oid": "b3239383d8a4b35aee853ed15aa83e66da70d098",
+      "size_bytes": 11638,
+      "sha256": "16bc2255a055f91eb8bc2a4b3f60427a6a1e5097fff5c714917572dcdfa40bc0"
+    },
+    {
+      "path": "LICENSE",
+      "git_oid": "2c47f941d74e9bfd120536c7538e7aec0e852402",
+      "size_bytes": 1085,
+      "sha256": "e32126cc9f11742c880994a47f21b5d6a67f5250322c8fd2287159ef847167e0"
+    },
+    {
+      "path": "MANIFEST.in",
+      "git_oid": "70a6e4d68686ef5fcebff139546054544be84b09",
+      "size_bytes": 2005,
+      "sha256": "4f3f06b6abfab5a58245dcc39be3ff02c0b52843dca1051733f0466dd10f76cc"
+    },
+    {
+      "path": "README.md",
+      "git_oid": "99dc519b9d057fb02cccc2fef96d50e8ba6ac952",
+      "size_bytes": 35631,
+      "sha256": "767167638d0fde2912331ad35f7c9de4b50485802f37eb61e7187e513b0de93f"
+    },
+    {
+      "path": "SECURITY.md",
+      "git_oid": "fac2502acb1aa8ba1e4f5783c25ce2b7f95d27aa",
+      "size_bytes": 5910,
+      "sha256": "f26d47aca23eb83426345961898d28fa9f4bef6a97dab4359a3cc26f1e421e3f"
+    },
+    {
+      "path": "chimera_v3/__init__.py",
+      "git_oid": "cbac18947edead6a9ba53f643dccfba796944973",
+      "size_bytes": 428,
+      "sha256": "e7068245c6e4a3b57236e0d7c0ec557b07912a0add5de5b6998560e551bd20c1"
+    },
+    {
+      "path": "chimera_v3/demo_pure.py",
+      "git_oid": "77dc98d74fac08521b1acd8724bce45b91fb5d19",
+      "size_bytes": 6670,
+      "sha256": "28edc5c2c97f6b9521205042177f16d62bd4b4e2bffb562ef6bf603f5daa29b9"
+    },
+    {
+      "path": "demos/CHIMERA_IMPLEMENTATION_ROADMAP.md",
+      "git_oid": "aac0ec887cf57ff912e513a992a779273d3299d2",
+      "size_bytes": 16532,
+      "sha256": "06091aee4ff607b7444e6944f624d1ef11516226418dccee2915be3c6b4f1412"
+    },
+    {
+      "path": "demos/DEMO_OFFICIAL_RESULTS.md",
+      "git_oid": "43b3a081af020f0f1beca38e587cd7c36c2adda7",
+      "size_bytes": 6856,
+      "sha256": "78ce1b9e69b0543998b8b630e344344d8d1f864320972d8af508bec8c6c8d599"
+    },
+    {
+      "path": "demos/README.md",
+      "git_oid": "9ed314b63a08eac94b789fab87d383cd25b423a1",
+      "size_bytes": 12232,
+      "sha256": "4c1befb7aeb9e3005f078ff5b5a35b9713ceabd692cd9d7b0b956a3b3de1e82e"
+    },
+    {
+      "path": "demos/chimera_arc_puzzle_demo.py",
+      "git_oid": "a915c9f288bb42b105993dbdcb53a2b8ce1b9cd1",
+      "size_bytes": 23465,
+      "sha256": "bd92dea91fbf4a71fbec6954568bd3d800b416c945b06de2339d49beba791fae"
+    },
+    {
+      "path": "demos/chimera_automated_benchmarks.py",
+      "git_oid": "83cee017bf6655de3a845da3eadfe398a10b494a",
+      "size_bytes": 20676,
+      "sha256": "c375e67779e95c47beb3c6044c96697936e1089319b50022b8bb239af50c80af"
+    },
+    {
+      "path": "demos/chimera_benchmark_comparison.py",
+      "git_oid": "40f7cb243e13fd4c83d0011bfbe1a1392d49328e",
+      "size_bytes": 9404,
+      "sha256": "edd1967525060bf953d503bd6400d55543e4043f78d9d4f2333672261e48fc67"
+    },
+    {
+      "path": "demos/chimera_benchmark_results.json",
+      "git_oid": "1f3c4fbb5b2e1ae056da285535a1ca887eade1b4",
+      "size_bytes": 457,
+      "sha256": "5da72f2ed61e13f6f6cdf758f7ffe935737d0c77a65141c51c28fc83c1d85164"
+    },
+    {
+      "path": "demos/chimera_edge_ai_demo.py",
+      "git_oid": "f5a0e223fcfcd25a0ea460d987bdb59743730522",
+      "size_bytes": 18441,
+      "sha256": "eb410f28c4de962d3df75d0de79729549b9c0223cf9a7f22c86a1224c008418b"
+    },
+    {
+      "path": "demos/chimera_integration_guide.py",
+      "git_oid": "6d4fc04c265d0f19a6ffed2dc1c0cc35fa81dee3",
+      "size_bytes": 15011,
+      "sha256": "de615556485d451b85a9e8469a0f2b434dbfed60e817609c7dd822a5740f8625"
+    },
+    {
+      "path": "demos/chimera_realtime_text_generation.py",
+      "git_oid": "9a3def12518ae287d93779314855f465f25475cb",
+      "size_bytes": 17276,
+      "sha256": "9cac6b42427a67922cb9e11ea83195cb21ceff9d03a66919d961701d951d2894"
+    },
+    {
+      "path": "demos/demo_holographic_pure.py",
+      "git_oid": "c3f6ff7b32a14371f7d72666db65d444bf41db0e",
+      "size_bytes": 9333,
+      "sha256": "631d03238cb2ddb06c25f7d60e2c40f17266e7ae1aec5718dc952bd68fe17125"
+    },
+    {
+      "path": "demos/demo_launcher.py",
+      "git_oid": "8ddcd0ea746b64da09210907e4a43388f7fdd198",
+      "size_bytes": 12205,
+      "sha256": "aa5fbb1e919428aba49db8ca29ed107ca685b280e608ba1f765ca01af766f0bb"
+    },
+    {
+      "path": "demos/demo_main.py",
+      "git_oid": "249d5a417bf3700bf73106687b8d054f6fd78d28",
+      "size_bytes": 6625,
+      "sha256": "15761739f64f8864f8f2c64ca2aeed4cad8fcd194a31a6e0283b85203e7ac046"
+    },
+    {
+      "path": "docs/INSTALLATION.md",
+      "git_oid": "1b7cdfdd78a381768df0bd78ad18a395fb1bbd78",
+      "size_bytes": 10350,
+      "sha256": "7bb4315dbfc16558e9af16f3cffe0429eb808af0cccf1c97cdc48a74aa3f75db"
+    },
+    {
+      "path": "docs/QUICK_START.md",
+      "git_oid": "86f1934711d4e96efd59b9f83ed15c2c37f8d602",
+      "size_bytes": 6223,
+      "sha256": "7b4d9fe3eb310eb5612f56b6c47a1aeef8cbd1d752222161dcc56598b7e47482"
+    },
+    {
+      "path": "docs/readme/01-render-pass.gif",
+      "git_oid": "7edff194ea8df3ae9d81e37dfd2c4e72908baef6",
+      "size_bytes": 1045158,
+      "sha256": "0226889c44751b0be6968e19f975e2f20fc1d009e6a0b86f2d55f300093a876f"
+    },
+    {
+      "path": "docs/readme/02-ca-pass-real.gif",
+      "git_oid": "d41b88945cdc7af605ca7ded6d52848044557abf",
+      "size_bytes": 563638,
+      "sha256": "866734cdbdd15d8d258eaec8f2731ff2ae7e8da6ac829e6f846ab03f28955ff5"
+    },
+    {
+      "path": "docs/readme/03-multi-pass.gif",
+      "git_oid": "68aeded24bdcfc515a5f98b8489e8919c083cc25",
+      "size_bytes": 906676,
+      "sha256": "5795dbdae6ebcc7e7b2d5d2d9bb03572bd90e75cbd96f4682f6979bad89d74e9"
+    },
+    {
+      "path": "docs/readme/04-background.gif",
+      "git_oid": "63ddf42af8fe3ed283c9e9a0688ebeb1c3223fe4",
+      "size_bytes": 159640,
+      "sha256": "51708badbda851b58f0d2b43d64fca2919d74f288d6a69d7832b42a9312a18d8"
+    },
+    {
+      "path": "docs/readme/05-quickstart-run.gif",
+      "git_oid": "00a321831b92c6519b66019678cda943d2d98212",
+      "size_bytes": 236885,
+      "sha256": "390f1f8b8145a500b64698a2a778003b20ee47edd2a1ccd1b1c25d7926cbff54"
+    },
+    {
+      "path": "docs/readme/06-pipeline.gif",
+      "git_oid": "7f87be9804e2b547b8b759f3e3ad79bacd2e355b",
+      "size_bytes": 915076,
+      "sha256": "9f7d4833e22ad476763d38e3357f14fda854860fbb7baebe27c3412cf2b18419"
+    },
+    {
+      "path": "docs/readme/07-texels.gif",
+      "git_oid": "8f3aebdcfd62d26ff38e78ae8295582a7d2027be",
+      "size_bytes": 466576,
+      "sha256": "b7a7c4d2d0b366e7f0ec1394b35560c15e80fa6d3aef8b23a77ff2b28a01531d"
+    },
+    {
+      "path": "docs/readme/08-demos-run.gif",
+      "git_oid": "426ad45cc4838a10a724ba864442a8d649fcb087",
+      "size_bytes": 224180,
+      "sha256": "ec536e8f907545c3d09ed15d23936519dfd2e6a47c5d62d38fd94bde9ff6baec"
+    },
+    {
+      "path": "docs/readme/09-install-stack.gif",
+      "git_oid": "7e4877059fe8541d17d2d03815bb094a022863ff",
+      "size_bytes": 737874,
+      "sha256": "f125dd57373a37adfe4c55bb85c295e19fcb5412dff64ba54edfefec54a10ee1"
+    },
+    {
+      "path": "docs/readme/10-contributing.gif",
+      "git_oid": "ad64167a0f9db6fcc98c672001c2e5994a020e43",
+      "size_bytes": 598619,
+      "sha256": "7addd0bbd94a690baf53f594d924fadc8e7ea9dd773a5aa256a53bd6646ba286"
+    },
+    {
+      "path": "docs/readme/11-status.gif",
+      "git_oid": "a86038c9362e4a4ba1bb19dbe23dec66e39850d5",
+      "size_bytes": 528604,
+      "sha256": "cd2b519927b93065241687226c0ece62c758b4ad1d4acb22b7a41fc075dd9f6a"
+    },
+    {
+      "path": "docs/readme/12-applications.gif",
+      "git_oid": "501d92404148fcb31325fc7d1343955fb1642aae",
+      "size_bytes": 614252,
+      "sha256": "0a576c8fb3677a683b8ac805c769721524efad1d962e01f420fc7f4b474c2964"
+    },
+    {
+      "path": "docs/readme/13-benchmark-provenance.gif",
+      "git_oid": "8303e9b8ee2666641b2b4d41b6827256171df49a",
+      "size_bytes": 1169147,
+      "sha256": "29d976b84d35d2aaef9b72406173431ffa5457c00046ec1b3d71f60505ff8be7"
+    },
+    {
+      "path": "docs/readme/14-cpu-run-findings.gif",
+      "git_oid": "513d2dde03ba043c32b54bd65327cd755089afaf",
+      "size_bytes": 469499,
+      "sha256": "cf397c51fd549b25a231c9c93ed00454fa2f4624acebccd67499ac99a47a7761"
+    },
+    {
+      "path": "docs/readme/15-improvements.gif",
+      "git_oid": "f5e1b8aa752291a2699001f4122241a58dd25483",
+      "size_bytes": 449786,
+      "sha256": "f543e0658ed153cf644389778230cc8327eb87f3550bbbe91a142f7c3b5ea38e"
+    },
+    {
+      "path": "examples/README.md",
+      "git_oid": "5acd58c624ddb37ab92efca8043483327f1fb84f",
+      "size_bytes": 9179,
+      "sha256": "dacf0c2c047820d8daa3a2017d60ee365307dc3595b42ae087166d859c09ff4a"
+    },
+    {
+      "path": "examples/attention_demo.py",
+      "git_oid": "e496c025399c3c771a0106326faa61b30fd7f191",
+      "size_bytes": 8761,
+      "sha256": "419e3d0679ef6deda5980972a4e40742c37171cc33df93cb25caa8af4b920196"
+    },
+    {
+      "path": "examples/math_operations.py",
+      "git_oid": "b03aa26439bf11a4d0ac0b0bc3d9d4949da06a9c",
+      "size_bytes": 7362,
+      "sha256": "3c27bab5804f3bde78869f219153e609339efd792be45e8cae95044650fcab1d"
+    },
+    {
+      "path": "pyproject.toml",
+      "git_oid": "64e570ba76141f66d2986bd16a955aa6cc11da92",
+      "size_bytes": 2288,
+      "sha256": "cbfb9445421b0c1370f7acd6e9e6db2c3f65ad8c2abaec1958729cdd0f1a6e71"
+    },
+    {
+      "path": "setup.py",
+      "git_oid": "872f87f8f457aaf554e3170f7488b165aff61798",
+      "size_bytes": 3820,
+      "sha256": "90bf5915faa8a160365842e4e48aa79d516def737edfa92312ead4971b4a44af"
+    },
+    {
+      "path": "tests/README.md",
+      "git_oid": "150066199e9af4e64708ab2e70456493174fbbca",
+      "size_bytes": 7579,
+      "sha256": "a3652a219a1c24439c4732a959cacf8c389276c45dd88f6756e2b2c4d874ad69"
+    },
+    {
+      "path": "tests/__init__.py",
+      "git_oid": "909b81bd4203e931bd5a2b833763e3d6d53556cb",
+      "size_bytes": 508,
+      "sha256": "9afa5e796765f6131d5b8759d8465a27017d1db2cfe9957f1260cb6efa07515d"
+    },
+    {
+      "path": "tests/benchmark_speed.py",
+      "git_oid": "164c077f6a55deb87e38a1fa83ae26eda43942c4",
+      "size_bytes": 8987,
+      "sha256": "ed24bb668b6f0a5d7130854207d909beabb85be5a2de8c4f1cc6ad6460542ef0"
+    },
+    {
+      "path": "tests/test_generation_complete.py",
+      "git_oid": "8751f7477c269f259254d9ca7a26c6ed6e19e66f",
+      "size_bytes": 9649,
+      "sha256": "b727c9c9218a177dc5b1b314c7fb7b11801934dc575e1c7d26849ea09e502b0f"
+    },
+    {
+      "path": "tests/test_matmul_correctness.py",
+      "git_oid": "2bad3f6c0414580748d7acb53d1b7a4f00c5d041",
+      "size_bytes": 8194,
+      "sha256": "fc63e85ae690db2e3cfc877669c51de2bae554b72658b95e621845b7ae302525"
+    },
+    {
+      "path": "tests/test_model_conversion.py",
+      "git_oid": "678e3dcebd3f49a15e525d6df1a7cefc42597a3c",
+      "size_bytes": 8782,
+      "sha256": "b5e2bb24c64ee682c885e778228b2f047517037c874af218e77ed3f28975575a"
+    },
+    {
+      "path": "tests/test_retina_basic.py",
+      "git_oid": "d3d707169d8674284d3ee91b13556986b4704b8f",
+      "size_bytes": 6665,
+      "sha256": "f54ac32103717c50f8e24a0bfff58b9f36601163e13d9e803038d94329d80bad"
+    }
+  ],
+  "anchors": [
+    {
+      "path": "README.md",
+      "line_start": 559,
+      "sha256": "2653a3def7aff80ee963e0086ac2afc1f76d5fa7584593db9c3901b122c7e6e4",
+      "snippet": "The benchmark and memory figures are constants."
+    },
+    {
+      "path": "README.md",
+      "line_start": 569,
+      "sha256": "e813b6bf6e13b47d580f50b94dfa8b568ef6597e47fb911d6575ad360fe31409",
+      "snippet": "9 of the 20 tracked Python files stop at a SyntaxError"
+    },
+    {
+      "path": "demos/DEMO_OFFICIAL_RESULTS.md",
+      "line_start": 9,
+      "sha256": "7134a68fcec9206036a4077454e846708808baba4afd0b51d5744ce63774f9d3",
+      "snippet": "These results represent SIMULATED benchmarks based on the CHIMERA research papers."
+    },
+    {
+      "path": "demos/chimera_benchmark_comparison.py",
+      "line_start": 25,
+      "sha256": "b2d35a32e020ff8536b2cfb04ba6574499d87e8543d1cdb47b3781e850a94ffa",
+      "snippet": "base_time = 1.84  # ms for 2048×2048"
+    },
+    {
+      "path": "demos/README.md",
+      "line_start": 360,
+      "sha256": "cc1bc2f0032c787bb7ef6bf0755a50608c413f1aac2cfc9a9ed96894a723c779",
+      "snippet": "1. **\"CHIMERA: A Neuromorphic GPU-Native Intelligence System for Abstract Reasoning\"**"
+    }
+  ],
+  "note": "These hashes describe Git blobs at the baseline commit before this attribution update. Matching bytes do not establish authorship, acquisition, or infringement."
+}
