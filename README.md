@@ -26,6 +26,10 @@
 
 **Contents** — [What is CHIMERA?](#what-is-chimera) · [Background](#background) · [🎯 Quick Start (5 Minutes)](#-quick-start-5-minutes) · [🏗️ Architecture Overview](#-architecture-overview) · [🚀 Performance Benchmarks](#-performance-benchmarks) · [📚 Documentation Structure](#-documentation-structure) · [🎮 Examples and Demos](#-examples-and-demos) · [🔧 Installation Options](#-installation-options) · [🤝 Contributing](#-contributing) · [📊 Project Status](#-project-status) · [🎓 Academic Impact](#-academic-impact) · [📞 Support and Community](#-support-and-community) · [Real-world applications](#real-world-applications) · [Observations and limitations](#observations-and-limitations) · [Possible improvements](#possible-improvements) · [📜 License](#-license) · [🙏 Acknowledgments](#-acknowledgments) · [🌟 The CHIMERA Vision](#-the-chimera-vision) · [Bibliography](#bibliography)
 
+<!-- impact-note:start -->
+<sub><strong>Efficiency and practical value.</strong> CHIMERA explores OpenGL shaders, texture-encoded state and associative correlation as reusable primitives for neural-computing experiments. The approach aims to make use of compatible graphics hardware beyond a CUDA-only setup and reduce repeated host-device work in suitable workloads. The <a href="#observations-and-limitations">implementation observations</a> explain what still needs measurement, keeping the contribution focused on an experimental backend rather than broad performance superiority.</sub>
+<!-- impact-note:end -->
+
 ## What is CHIMERA?
 
 <p align="center"><img src="docs/readme/01-render-pass.gif" alt="Two NumPy arrays uploaded as textures, combined by a fragment shader into a framebuffer texture" width="100%"><br><sub>Fig. 1 — One draw call is one layer. Schematic of <code>demo_basic_math()</code> in chimera_v3/demo_pure.py.</sub></p>
